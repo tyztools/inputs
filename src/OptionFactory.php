@@ -24,6 +24,9 @@ class OptionFactory {
         isset($params[2]) && $optionParam["default"] = $params[2];//接收默认值
         $option = new Option($optionParam);
         isset($params[3]) && $params[3] === true && $option->setIgnore(true);
+        if (isset($params[4]) && is_array($params[4])) {
+            $option->setFilters($params[4]);
+        }
         return $option;
     }
 }
