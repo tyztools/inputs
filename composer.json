@@ -10,9 +10,12 @@
     "minimum-stability": "dev",
     "require":
     {},
-    "psr-4":
+    "autoload":
     {
-        "Tyz\\": "src/"
+        "psr-4":
+        {
+            "Tyz\\": "src/"
+        }
     },
     "version": "1.0.0"
 }
