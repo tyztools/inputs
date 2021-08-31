@@ -14,7 +14,7 @@
     {
         "psr-4":
         {
-            "Tyz\\": "src/"
+            "Tyz\\Inputs\\": "src/"
         }
     },
     "version": "1.0.0"
