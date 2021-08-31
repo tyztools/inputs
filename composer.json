@@ -1,7 +1,6 @@
 {
     "name": "tyz/inputs",
     "description": "输入接收处理助手",
-    "type": "project",
     "license": "MIT",
     "authors": [
     {
