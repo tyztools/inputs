@@ -47,10 +47,10 @@ class Input
             } else {
                 $default = $defaults;
             }
-            if (!is_object($options) && $options instanceof Option) {
+            if (is_object($options) && $options instanceof Option) {
                 $option = $options;
                 $option->setProp("get", $get)->setProp("set", $set)->setProp("default", $default);
-            } elseif (isset($options[$get]) && $options[$get] instanceof Option) {
+            } elseif (is_array($options) && isset($options[$get]) && $options[$get] instanceof Option) {
                 $option = $options[$get];
                 $option->setProp("get", $get)->setProp("set", $set)->setProp("default", $default);
             } else {
