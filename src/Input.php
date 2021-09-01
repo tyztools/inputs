@@ -47,7 +47,10 @@ class Input
             } else {
                 $default = $defaults;
             }
-            if (isset($options[$get]) && $options[$get] instanceof Option) {
+            if (!is_array($options) && $options instanceof Option) {
+                $option = $options;
+                $option->setProp("get", $get)->setProp("set", $set)->setProp("default", $default);
+            } elseif (isset($options[$get]) && $options[$get] instanceof Option) {
                 $option = $options[$get];
                 $option->setProp("get", $get)->setProp("set", $set)->setProp("default", $default);
             } else {
